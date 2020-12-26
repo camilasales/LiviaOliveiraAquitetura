@@ -1,10 +1,10 @@
 <template>
 <div style="background-color:#111111">
-  <div class="my-10 px-10 d-flex">
-      <hr
-        style="height:1px; background-color: #735702; border-style: none;"
-        width="100%"
-      />
+    <div class="my-10 px-10 d-flex">
+        <hr
+            style="height:1px; background-color: #735702; border-style: none;"
+            width="100%"
+        />
     </div>
   <v-footer
     color="#111111"

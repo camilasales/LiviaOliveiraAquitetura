@@ -1,26 +1,145 @@
 <template >
-  <div class="home grid-information" >
-    <v-img
-      :src="require('@/assets/liviaOliveira.jpg')"
-      jumbotron
-      id="imgHome"
-    ></v-img>
-    <!-- quadrado de information e explication -->
-    <div class="d-flex information fadeIn">
-      <v-col class="font-information">
-        <p>
-          Fundado em 2020, localizado na cidade de São Paulo, 
-          o L.O. Arquitetura é focado em projeto arquitetônico e 
-          de interiores no segmento residencial, comercial e corporativo.
-        </p>
-        <br>
-        <p>
-          Com um design contemporâneo, sofisticação e um atendimento altamente 
-          personalizado, o objetivo é transformar a vida dos clientes proporcionando experiências únicas.
-        </p>
-      </v-col>
+  <div style="background-color: #111111;" >
+    <div class="home grid-information" >
+      <v-img
+        :src="require('@/assets/liviaOliveira.jpg')"
+        jumbotron
+        id="imgHome"
+      ></v-img>
+      <!-- quadrado de information e explication -->
+      <div class="d-flex information fadeIn">
+        <v-col class="font-information">
+          <p>
+            Fundado em 2020, localizado na cidade de São Paulo, 
+            o L.O. Arquitetura é focado em projeto arquitetônico e 
+            de interiores no segmento residencial, comercial e corporativo.
+          </p>
+          <br>
+          <p>
+            Com um design contemporâneo, sofisticação e um atendimento altamente 
+            personalizado, o objetivo é transformar a vida dos clientes proporcionando experiências únicas.
+          </p>
+        </v-col>
+      </div>
     </div>
-    <v-spacer></v-spacer>
+    <v-row no-gutters class="pl-12 py-10">
+      <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
+        <img
+          v-if="$vuetify.breakpoint.smAndUp"
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_regua.png')"
+        >
+        <span class="title-topics">LEVANTAMENTO ARQUITETÔNICO</span>
+        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+      </v-col>
+      <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
+        <img
+          v-if="$vuetify.breakpoint.smAndUp"
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_prancheta.png')"
+        >
+        <span class="title-topics">GERENCIAMENTO DE OBRAS</span>
+        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+      </v-col>
+      <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
+        <img
+          v-if="$vuetify.breakpoint.smAndUp"
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_luminaria.png')"
+        >
+        <span class="title-topics">INTERIORES</span>
+        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+      </v-col>
+      <v-col cols="12" class="mt-14">
+          <v-btn outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Siba Mais</v-btn>
+      </v-col>
+    </v-row>
+    <v-row no-gutters class="pl-12 py-10">
+      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
+        <img
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_comentario.png')"
+        >
+        <span style="color:#ffffff; text-align: center;" class=" pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+        <div class="my-8 px-10 d-flex">
+            <hr
+                style="height:1px; background-color: #735702; border-style: none;"
+                width="100px"
+            />
+        </div>
+        <v-avatar>
+          <img
+            :src="require('@/assets/img/coments/coments_foto.png')"
+            alt="John"
+          >
+        </v-avatar>
+        <span style="color:#ffffff;">Cliente Legal</span>
+      </v-col>
+      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
+        <img
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_comentario.png')"
+        >
+        <span style="color:#ffffff; text-align: center;" class=" pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+        <div class="my-8 px-10 d-flex">
+            <hr
+                style="height:1px; background-color: #735702; border-style: none;"
+                width="100px"
+            />
+        </div>
+        <v-avatar>
+          <img
+            :src="require('@/assets/img/coments/coments_foto.png')"
+            alt="John"
+          >
+        </v-avatar>
+        <span style="color:#ffffff;">Cliente Legal</span>
+      </v-col>
+      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
+        <img
+          height="45px"
+          width="45px"
+          :src="require('@/assets/img/icons/icon_comentario.png')"
+        >
+        <span style="color:#ffffff; text-align: center;" class=" pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
+          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
+          Cumque quod repellendus a.</span>
+        <div class="my-8 px-10 d-flex">
+            <hr
+                style="height:1px; background-color: #735702; border-style: none;"
+                width="100px"
+            />
+        </div>
+        <v-avatar class="d-flex flex-column justify-center align-center ">
+          <img
+            :src="require('@/assets/img/coments/coments_foto.png')"
+            alt="John"
+          >
+        </v-avatar>
+        <span style="color:#ffffff;">Cliente Legal</span>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -62,6 +181,27 @@ export default {
   color: #ffffff;
   opacity: 1;
   font-size: calc(12px + 1vw);
+}
+.title-topics{
+  color:#BF8924;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.title-text{
+  color:#ffffff;
+  /* font-size: 20px; */
+  padding-right: 20px;
+}
+.text{
+    color:#BF8924;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.coments-people{
+  border: 1px solid #bf8924 !important;
+  margin-right: 20px;
+  padding: 20px;
 }
 
 @keyframes fadeIn {
