@@ -22,6 +22,7 @@
         </v-col>
       </div>
     </div>
+    <!-- serviços -->
     <v-row no-gutters class="pl-12 py-10">
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
         <img
@@ -30,11 +31,12 @@
           width="45px"
           :src="require('@/assets/img/icons/icon_regua.png')"
         >
-        <span class="title-topics">LEVANTAMENTO ARQUITETÔNICO</span>
-        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
-          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
-          Cumque quod repellendus a.</span>
+        <span class="title-topics">PROJETO DE INTERIORES (Projeto Executivo de Interiores)</span>
+        <span class="title-text">
+          Projeto completo para você realizar sua obra, sendo ela do zero ou uma reforma, 
+          nele constam todas as informações e detalhamentos necessários. <br>
+          <span class="title-topics px-2 mt-2" style="background-color:#BF8924; color:#111111">MAIS PEDIDO</span>
+        </span>
       </v-col>
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
         <img
@@ -43,11 +45,12 @@
           width="45px"
           :src="require('@/assets/img/icons/icon_prancheta.png')"
         >
-        <span class="title-topics">GERENCIAMENTO DE OBRAS</span>
-        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
-          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
-          Cumque quod repellendus a.</span>
+        <span class="title-topics">PROJETO ARQUITETÔNICO (Projeto Executivo de Arquitetura)</span>
+        <span class="title-text">
+          Projeto completo para você realizar sua obra, sendo ela do zero ou uma reforma, 
+          nele constam todas as informações e detalhamentos necessários. <br>
+          <span class="title-topics px-2 mt-2" style="background-color:#BF8924; color:#111111">MAIS PEDIDO</span>
+        </span>
       </v-col>
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
         <img
@@ -56,16 +59,19 @@
           width="45px"
           :src="require('@/assets/img/icons/icon_luminaria.png')"
         >
-        <span class="title-topics">INTERIORES</span>
-        <span class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Ullam officia esse, enim, ad accusantium tempora rerum a laborum 
-          similique voluptatibus iusto delectus iure reiciendis commodi autem. 
-          Cumque quod repellendus a.</span>
+        <span class="title-topics">
+          CONSULTORIA DE INTERIORES <br>(Este pacote pode custar até R$600,00)
+        </span>
+        <span class="title-text">
+          Projeto simplificado para uma reforma de um ambiente. Pode estar acompanhado ou não do 3D.
+        </span>
       </v-col>
       <v-col cols="12" class="mt-14">
-          <v-btn outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Siba Mais</v-btn>
+          <v-btn @click="$router.push({name: 'Servicos'})" outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Saiba Mais</v-btn>
       </v-col>
     </v-row>
+
+    <!-- COMENTARIOS -->
     <v-row no-gutters class="pl-12 py-10">
       <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
         <img

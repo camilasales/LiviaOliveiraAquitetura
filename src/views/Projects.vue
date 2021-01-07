@@ -5,21 +5,20 @@
         <v-col
           v-for="(item, key) in projects"
           :key="key"
-          class="d-flex child-flex fadeIn my-3"
+          class=" my-2"
           cols="12"
           lg="4"
           md="4"
           sm="12"
         >
           <v-hover v-slot="{ hover }">
-            <div :class="{ 'on-hover': hover }">
-              <v-img :src="item" aspect-ratio="1" class="grey lighten-2 ">
+            <div class="on-hover">
+              <v-img class="img" :src="item" aspect-ratio="1" >
                 <div
                   @click="setDialog(item.id)"
                   v-if="$vuetify.breakpoint.mdAndUp"
                   :class="{ 'show-btns': hover }"
                   :style="hover ? 'opacity: 100%' : 'opacity: 0.0'"
-                  class="justify-center align-center"
                 >
                   <v-row class="d-flex flex-column mx-3">
                     <span
@@ -86,18 +85,29 @@ export default {
 };
 </script>
 <style scoped>
->>> .on-hover {
-  transform: scale(1.1);
-  transition: 0.5s ease-in-out;
+.on-hover {
+  overflow: hidden;
+}
+.on-hover .img {
+  max-width: 100%;
+	-moz-transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+}
+.on-hover:hover .img {
+  -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.2);
+  transition: 0.8s ease-in-out;
 }
 
->>> .show-btns {
+.show-btns {
   transition: opacity 0.5s ease-in-out;
   background-color: #000000d5;
   height: 100%;
   cursor: pointer;
 }
->>> span {
+span {
   letter-spacing: 2px;
   font-size: calc(20px + 1vw);
   background-image: linear-gradient(

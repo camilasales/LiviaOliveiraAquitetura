@@ -130,8 +130,9 @@
 </script>
 <style scoped>
 >>> .paralax{
-    background-image: url("../assets/sobreLivia.jpg") !important;
+    background-image: url("../assets/liviaContact.jpg") !important;
     /* background-repeat: no-repeat, repeat-y; */
+    background-color: #d6d5d5;
     background-position: center top;
     background-attachment: fixed;
 }
@@ -158,5 +159,11 @@
     letter-spacing: 2px;
     padding: 30px 30px 30px 30px !important;
     border-radius: 30px;
+}
+
+@media  screen and (max-width: 800px){
+    >>> .paralax{
+        background-image: url("../assets/liviaContactMobile.jpg") !important;
+    }
 }
 </style>

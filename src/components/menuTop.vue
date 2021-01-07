@@ -64,6 +64,16 @@
             </div>
             <div class="my-2">
               <v-btn
+                @click="changePage('Servicos')"
+                dark
+                text
+                class="menu-actions"
+              >
+                serviços
+              </v-btn>
+            </div>
+            <div class="my-2">
+              <v-btn
                 @click="changePage('Sobre')"
                 dark
                 text
