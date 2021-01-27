@@ -4,7 +4,14 @@
 
             <!-- projetos -->
             <v-col cols="12" sm="8" md="4" lg="4" class="d-flex flex-column align-center pa-2 px-16">
-                <span class="title-topics my-12">PROJETOS</span>
+                <div class="d-flex align-center" :class="$vuetify.breakpoint.smAndDown ? 'my-4' : 'my-12' " >
+                <img
+                    :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                    :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                    :src="require('@/assets/img/icons/icon_regua.png')"
+                    >
+                <span class="title-topics ml-4">PROJETOS</span>
+                </div>
                 <div @click="openDialog(item.name, item.description)" class="btn-service d-flex align-center justify-space-between"  v-for="(item, index) in projetos" :key="index">
                     <span class="title-text">{{item.name}}</span>
                     <img
@@ -16,8 +23,15 @@
 
             <!-- consultorias -->
             <v-col cols="12" sm="8" md="4" lg="4" class="d-flex flex-column align-center pa-2 px-16">
-                <span class="title-topics my-12">CONSULTORIAS</span>
-                <div @click="openDialog(item.name, item.description)" class="btn-service d-flex align-center justify-space-between" v-for="(item, index) in consultorias" :key="index">
+                <div class="d-flex align-center" :class="$vuetify.breakpoint.smAndDown ? 'my-4' : 'my-12' " >
+                    <img
+                        :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :src="require('@/assets/img/icons/icon_prancheta.png')"
+                        >
+                    <span class="title-topics ml-4">CONSULTORIAS</span>
+                </div>
+                <div @click="openDialog(item.nameInside, item.description)" class="btn-service d-flex align-center justify-space-between" v-for="(item, index) in consultorias" :key="index">
                     <span class="title-text">{{item.name}}</span>
                     <img
                     :src="require('@/assets/img/icons/mais.png')"
@@ -26,9 +40,17 @@
             </v-col>
             <!-- fim consultorias -->
 
-            <!-- consultorias -->
+            <!-- orcamento -->
             <v-col cols="12" sm="8" md="4" lg="4" class="d-flex flex-column align-center pa-2 px-16">
-                <span class="title-topics my-12">ORÇAMENTOS</span>
+                <div class="d-flex align-center" :class="$vuetify.breakpoint.smAndDown ? 'my-4' : 'my-12' " >
+                    <img
+
+                        :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :src="require('@/assets/img/icons/architecture.png')"
+                        >
+                    <span class="title-topics ml-4">ORÇAMENTOS</span>
+                </div>
                 <div @click="openDialog(item.name, item.description)" class="btn-service d-flex align-center justify-space-between" v-for="(item, index) in orcamentos" :key="index">
                     <span class="title-text">{{item.name}}</span>
                     <img
@@ -36,11 +58,18 @@
                     >
                 </div>
             </v-col>
-            <!-- fim consultorias -->
+            <!-- fim orcamento -->
 
             <!-- obras -->
             <v-col cols="12" sm="8" md="4" lg="4" class="d-flex flex-column align-center pa-2 px-16">
-                <span class="title-topics my-12">ORÇAMENTOS</span>
+                <div class="d-flex align-center" :class="$vuetify.breakpoint.smAndDown ? 'my-4' : 'my-12' " >
+                    <img
+                        :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :src="require('@/assets/img/icons/sketch.png')"
+                        >
+                    <span class="title-topics ml-4">OBRAS</span>
+                </div>
                 <div @click="openDialog(item.name, item.description)" class="btn-service d-flex align-center justify-space-between" v-for="(item, index) in obras" :key="index">
                     <span class="title-text">{{item.name}}</span>
                     <img
@@ -49,10 +78,17 @@
                 </div>
             </v-col>
             <!-- fim obras -->
-
+            <v-col></v-col>
             <!-- em breve -->
             <v-col cols="12" sm="8" md="4" lg="4" class="d-flex flex-column align-center pa-2 px-16">
-                <span class="title-topics my-12">EM BREVE</span>
+                <div class="d-flex align-center" :class="$vuetify.breakpoint.smAndDown ? 'my-4' : 'my-12' " >
+                    <img
+                        :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :src="require('@/assets/img/icons/back-in-time.png')"
+                        >
+                    <span class="title-topics ml-4">EM BREVE</span>
+                </div>
                 <div @click="openDialog(item.name, item.description)" class="btn-service d-flex align-center justify-space-between" v-for="(item, index) in emBreve" :key="index">
                     <span class="title-text">{{item.name}}</span>
                     <img
@@ -91,10 +127,18 @@
         <!-- fim detalhes servicos -->
 
         <!-- calcule -->
-        <v-row>
-            <v-col>
-                <p>Calcule e descubra aproximadamente preço do seu projeto</p>
-                <v-btn outlined style="color:#BF8924; padding: 20px 20px 20px 20px; border-radius: 20px;" class="pa-7 text">Calcular</v-btn>
+        <v-row class="mt-6">
+            <v-col class="d-flex flex-column justify-center align-center">
+                <span class="title-topics" align="center" justify="center">Ficou com alguma dúvida? <br> Fale comigo</span>
+                <v-btn outlined style="color:#BF8924;  border-radius: 20px;" class="pa-7 text" href="https://api.whatsapp.com/send?phone=5511951323947"  target="_blank">
+                    <img
+                        :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
+                        :src="require('@/assets/img/icons/whatsapp.png')"
+                        class="mr-4"
+                    >
+                    Envie uma mensagem
+                </v-btn>
             </v-col>
         </v-row>
         <!-- fim calcule -->
@@ -153,14 +197,17 @@ export default {
             consultorias:[
                 {
                     name: 'Consultoria Imobiliária',
+                    nameInside: 'Consultoria Imobiliária',
                     description: 'Visita técnica de acompanhamento para orientação analisando variantes de um imóvel já existente, como orientação solar, ventos predominantes, possibilidade de reforma para quebra de paredes e programa de necessidades.',
                 },
                 {
                     name: 'Consultoria Pré-terreno',
+                    nameInside: 'Consultoria Pré-terreno',
                     description: 'Orientação técnica, que pode estar acompanhada de visita, quando há dúvidas em qual o melhor terreno para comprar visando todas as suas necessidades e prioridades, analisando as caraterísticas físicas do local como orientação solar, ventos predominantes, programa de necessidades e declives do terreno.',
                 },
                 {
                     name: 'Consultoria de Interiores',
+                    nameInside:'Consultoria de Interiores (Este pacote pode custar até R$600,00)',
                     description: 'Projeto simplificado para uma reforma de um ambiente. Pode estar acompanhado ou não do 3D.',
                 },
             ],

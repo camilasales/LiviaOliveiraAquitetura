@@ -23,8 +23,9 @@
                   <v-row class="d-flex flex-column mx-3">
                     <span
                       class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }}</span
-                    >
+                      >{{ item.name }} 
+                      <p class="body-1">Ver mais</p> 
+                    </span>
                   </v-row>
                 </div>
                 <div
@@ -36,8 +37,9 @@
                   <v-row class="d-flex flex-column mx-3">
                     <span
                       class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }}</span
-                    >
+                      >{{ item.name }} 
+                      <p class="body-1">Ver mais</p> 
+                    </span>
                   </v-row>
                 </div>
               </v-img>

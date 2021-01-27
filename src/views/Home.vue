@@ -60,7 +60,7 @@
           :src="require('@/assets/img/icons/icon_luminaria.png')"
         >
         <span class="title-topics">
-          CONSULTORIA DE INTERIORES <br>(Este pacote pode custar até R$600,00)
+          CONSULTORIA DE INTERIORES
         </span>
         <span class="title-text">
           Projeto simplificado para uma reforma de um ambiente. Pode estar acompanhado ou não do 3D.

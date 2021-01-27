@@ -55,7 +55,7 @@
         <div style="margin-right:100px" v-if="$vuetify.breakpoint.smAndUp">
             <v-col>
                 <v-btn outlined style="color:#BF8924; padding: 100px 20px 100px 20px" >
-                    <a href="http://"  target="_blank">
+                    <a href="https://linktr.ee/liviaoliveira_arq"  target="_blank">
                         <img
                         :src="require('@/assets/qrCode.png')"
                         />
@@ -75,11 +75,11 @@
             icons: [
                 {
                     src:require('@/assets/img/icons/icon_facebook.png'),
-                    href:'#'
+                    href:'https://web.facebook.com/liviaoliveiraarq?_rdc=1&_rdr'
                 },
                 {
                     src:require('@/assets/img/icons/icon_instagram.png'),
-                    href:'#'
+                    href:'https://www.instagram.com/liviaoliveira_arq/'
                 },
                 {
                     src:require('@/assets/img/icons/icon_linkedin.png'),
@@ -87,7 +87,7 @@
                 },
                 {
                     src:require('@/assets/img/icons/icon_pinterest.png'),
-                    href:'#'
+                    href:'https://br.pinterest.com/liviaoliveira_arq/'
                 },
                 {
                     src:require('@/assets/img/icons/icon_twitter.png'),
