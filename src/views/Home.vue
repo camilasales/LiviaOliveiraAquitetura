@@ -22,7 +22,8 @@
         </v-col>
       </div>
     </div>
-    <!-- serviços -->
+
+    <!-- servicos -->
     <v-row no-gutters class="pl-12 py-10">
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
         <img
@@ -67,12 +68,73 @@
         </span>
       </v-col>
       <v-col cols="12" class="mt-14">
-          <v-btn @click="$router.push({name: 'Servicos'})" outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Saiba Mais</v-btn>
+          <v-btn @click="$router.push({name: 'Projetos'})" outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Saiba Mais</v-btn>
       </v-col>
     </v-row>
+    <!-- fim servicos -->
 
-    <!-- COMENTARIOS -->
-    <v-row no-gutters class="pl-12 py-10">
+
+    <!-- projetos -->
+    <v-row no-gutters class="px-10 my-10" justify="space-between" >
+      <v-col cols="12" >
+          <p style="color:#BF8924" class="title-topics">PROJETOS</p>
+      </v-col>
+    </v-row>
+    <v-row no-gutters class="px-10 list" justify="space-between">
+      <v-col
+        cols="12"
+        sm="12"
+        lg="4"
+        md="4"
+        class="pr-4 mb-4 item-list"
+      >
+        <v-img
+          class="img" 
+          aspect-ratio="1" 
+          :src="require('@/assets/img/projects/laranjalPaulista/laranjal_paulista_1.jpg')"
+        >
+        <span>Laranjal Paulista</span>
+        </v-img>
+      </v-col>
+
+      <v-col
+        cols="12"
+        sm="12"
+        lg="4"
+        md="4"
+        class="pr-4 mb-4 item-list"
+      >
+        <v-img 
+          class="img" 
+          aspect-ratio="1"
+         :src="require('@/assets/img/projects/ap1135/ap1135_1.jpeg')">
+        <span>Apartamento 1135</span>
+        </v-img>
+      </v-col>
+
+      <v-col
+        cols="12"
+        sm="12"
+        lg="4"
+        md="4"
+        class="pr-4 mb-4 item-list"
+      >
+        <v-img 
+        class="img" 
+        aspect-ratio="1"
+        :src="require('@/assets/img/projects/residencial50/residencial50_1.jpg')">
+        <span>Residencial 50</span>
+        </v-img>
+      </v-col>
+       <v-col cols="12" class="mt-14">
+          <v-btn @click="$router.push({name: 'Servicos'})" outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">Ver todos os projetos</v-btn>
+      </v-col>
+    </v-row>
+    <!-- fim projetos -->
+
+
+    <!-- comentarios -->
+    <v-row no-gutters class="px-10 py-10">
       <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
         <img
           height="45px"
@@ -146,6 +208,7 @@
         <span style="color:#ffffff;">Cliente Legal</span>
       </v-col>
     </v-row>
+    <!-- fim comentarios -->
   </div>
 </template>
 
@@ -156,7 +219,54 @@ export default {
   name: "Home"
 };
 </script>
-<style >
+<style>
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.list .item-list {
+  flex: 1;
+}
+
+.list .item-list span {
+  display: block;
+  background: rgba(0, 0, 0, 0.685);
+  padding: 1.7rem;
+  font-size: 22px;
+  margin-top: 25rem;
+  color: #BF8924  ;
+}
+
+@media (hover: hover) {
+  .list .item-list span {
+    transform: translateY(100px);
+    transition: 0.2s;
+  }
+  .list:hover span {
+    transform: translateY(0);
+  }
+  .list .item-list:nth-child(1) span {
+    transition-delay: 0.0s;
+  }
+  .list .item-list:nth-child(2) span {
+    transition-delay: 0.05s;
+  }
+  .list .item-list:nth-child(3) span {
+    transition-delay: 0.1s;
+  }
+  .list .item-list:nth-child(4) span {
+    transition-delay: 0.15s;
+  }
+  .list .item-list:nth-child(5) span {
+    transition-delay: 0.2s;
+  }
+  .list .item-list:nth-child(6) span {
+    transition-delay: 0.25s;
+  }
+}
+
 #imgHome{
   /* background: url('../assets/liviaOliveira.jpg') no-repeat bottom center scroll;
   background-position: 30% 45%;
