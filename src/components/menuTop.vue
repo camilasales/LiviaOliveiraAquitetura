@@ -14,7 +14,7 @@
         @click="dialog = true"
         :class="$vuetify.breakpoint.smAndUp ? 'mr-10' : 'mr-0'"
       >
-        <a><img :src="require('@/assets/menu.png')"/></a>
+        <a><img :src="require('@/assets/img/icons/icon_menu.png')"/></a>
       </v-btn>
     </v-toolbar>
     <v-dialog v-model="dialog" fullscreen>
@@ -22,21 +22,21 @@
         <v-card-title>
           <div>
             <v-btn
-              class="menu-actions pa-8 "
+              class="menu-actions mt-10 mr-10"
               absolute
               top
               right
               icon
               @click="dialog = !dialog"
             >
-              <a><img :src="require('@/assets/close.png')"/></a>
+              <a><img :src="require('@/assets/img/icons/icon_close.png')"/></a>
             </v-btn>
           </div>
         </v-card-title>
 
         <v-card-text class="mt-16">
           <v-col class="pl-0 d-flex justify-center" cols="12">
-            <p class="menu-actions" style="border-bottom: 1px solid  #d3931e;">
+            <p class="menu-actions" style="border-bottom: 1px solid  #6c4711;">
               MENU
             </p>
           </v-col>
@@ -83,7 +83,12 @@
               </v-btn>
             </div>
             <div class="my-2">
-              <v-btn dark  @click="changePage('Contato')" text class="menu-actions">
+              <v-btn
+                dark
+                @click="changePage('Contato')"
+                text
+                class="menu-actions"
+              >
                 contato
               </v-btn>
             </div>
@@ -113,10 +118,10 @@ export default {
   },
 };
 </script>
-<style scoped>
->>> .menu-actions {
-  color: #d3931e !important;
-  font-size: 20px !important;
-  letter-spacing: 2px !important;
-}
+<style scoped lang="sass">
+.menu-actions 
+  color: #6c4711 !important
+  font-size: 20px !important
+  letter-spacing: 2px !important
+
 </style>

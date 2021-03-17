@@ -47,7 +47,7 @@
 
                         :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
                         :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
-                        :src="require('@/assets/img/icons/architecture.png')"
+                        :src="require('@/assets/img/icons/icon_arquitetura.png')"
                         >
                     <span class="title-topics ml-4">ORÇAMENTOS</span>
                 </div>
@@ -66,7 +66,7 @@
                     <img
                         :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
                         :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
-                        :src="require('@/assets/img/icons/sketch.png')"
+                        :src="require('@/assets/img/icons/icon_sketch.png')"
                         >
                     <span class="title-topics ml-4">OBRAS</span>
                 </div>
@@ -85,7 +85,7 @@
                     <img
                         :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
                         :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
-                        :src="require('@/assets/img/icons/back-in-time.png')"
+                        :src="require('@/assets/img/icons/icon_backInTime.png')"
                         >
                     <span class="title-topics ml-4">EM BREVE</span>
                 </div>
@@ -130,7 +130,7 @@
         <v-row class="mt-6">
             <v-col class="d-flex flex-column justify-center align-center">
                 <span class="title-topics" align="center" justify="center">Ficou com alguma dúvida? <br> Fale comigo</span>
-                <v-btn outlined style="color:#BF8924;  border-radius: 20px;" class="pa-7 text" href="https://api.whatsapp.com/send?phone=5511951323947"  target="_blank">
+                <v-btn outlined style="color:#6c4711;  border-radius: 20px;" class="pa-7 mt-4" href="https://api.whatsapp.com/send?phone=5511951323947"  target="_blank">
                     <img
                         :height="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
                         :width="$vuetify.breakpoint.smAndDown ? '32px' : '45px'"
@@ -252,29 +252,34 @@ export default {
     
 }
 </script>
-<style scoped>
-.title-topics{
-  color:#BF8924;
-  font-size: 20px;
-}
-.title-text{
-  color:#ffffff;
-  /* font-size: 20px; */
-  padding-right: 20px;
-}
-.btn-service{
-    color:#BF8924; 
-    padding: 20px 20px 20px 20px;
-    border: 1px solid #bf8924 !important;
-    border-radius: 15px;
-    text-align: start;
-    margin-bottom: 6vh;
-    width: 300px;
-}
+<style scoped lang="sass">
+@mixin color-gradient-text
+    background-image: radial-gradient(circle at 58.46% 50%, #ac8b4a 0, #a27a37 25%, #956521 50%, #885008 75%, #7e3f00 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
-.btn-service:hover{
-    background-color: #bf892436;
-    transition: 0.8s ease-in-out;
-    cursor: pointer;
-}
+.title-topics
+  @include color-gradient-text
+  font-size: 20px
+
+.title-text
+  color:#ffffff
+  /* font-size: 20px */
+  padding-right: 20px
+
+.btn-service
+    @include color-gradient-text
+    padding: 20px 20px 20px 20px
+    border: 1px solid #6c4711 !important
+    border-radius: 15px
+    text-align: start
+    margin-bottom: 6vh
+    width: 300px
+
+
+.btn-service:hover
+    background-color: #bf892436
+    transition: 0.8s ease-in-out
+    cursor: pointer
+
 </style>

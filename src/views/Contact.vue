@@ -5,7 +5,14 @@
         <v-row no-gutters style="background-color: #000000d5; height: 70vh;" justify="space-around" class="pa-10">
             <v-col cols="10" md="5" lg="5" class="d-flex flex-column justify-center align-center" >
                 <p class="text-contact" style="text-align: center;">Já possui os dados do projeto?</p>   
-                <v-btn outlined style="color:#BF8924; padding: 20px 20px 20px 20px" class="pa-7 text">entre em contato</v-btn>
+                <v-btn 
+                    outlined 
+                    style="color:#6c4711; padding: 20px 20px 20px 20px" 
+                    class="pa-7 text" href="https://api.whatsapp.com/send?phone=5511951323947"
+                    target="_blank"
+                >
+                    entre em contato
+                </v-btn>
             </v-col>
         </v-row>
 
@@ -37,7 +44,7 @@
         <!-- formulario mensagem -->
         <v-row no-gutters style="background-color: #ffffff9f; height:auto" justify="space-around" align="center" class="pa-10">
             <v-col>
-                <v-form v-model="valid">
+                <v-form  ref="form">
                     <v-container class="pt-14">
                         <v-row>
                             <v-col
@@ -46,10 +53,11 @@
                             >
                             <v-text-field
                                 color="#111111"
-                                v-model="name"
-                                :rules="nameRules"
+                                v-model="form.name"
+                                :rules="rules.nameRules"
                                 label="Nome"
                                 required
+                                validate-on-blur
                             ></v-text-field>
                             </v-col>
 
@@ -59,10 +67,11 @@
                             >
                             <v-text-field
                                 color="#111111"
-                                v-model="email"
-                                :rules="emailRules"
+                                v-model="form.email"
+                                :rules="rules.emailRules"
                                 label="E-mail"
                                 required
+                                validate-on-blur
                             ></v-text-field>
                             </v-col>
 
@@ -72,10 +81,11 @@
                             >
                             <v-text-field
                                 color="#111111"
-                                v-model="subject"
-                                :rules="subjectRules"
+                                v-model="form.subject"
+                                :rules="rules.subjectRules"
                                 label="Assunto"
                                 required
+                                validate-on-blur
                             ></v-text-field>
                             </v-col>
 
@@ -85,14 +95,15 @@
                             >
                                 <v-textarea
                                 color="#111111"
-                                v-model="message"
-                                :rules="messageRules"
+                                v-model="form.message"
+                                :rules="rules.messageRules"
                                 label="Mensagem"
+                                validate-on-blur
                                 ></v-textarea>
                             </v-col>                            
                         </v-row>
                         <v-row justify="center" class="py-12">
-                            <v-btn color="#111111" class="button-send">Enviar</v-btn>
+                            <v-btn color="#111111" class="button-send" @click="sendEmail()" :loading="loading">Enviar</v-btn>
                         </v-row>
                     </v-container>
                 </v-form>
@@ -103,67 +114,95 @@
 </template>
 <script>
   export default {
-    data: () => ({
-      valid: false,
-      name: '',
-      subject: '',
-      nameRules: [
-        v => !!v || 'Por favor, preencha o nome',
-        v => v.length >= 10 || 'O nome precisa ter mais de 10 caracteres',
-      ],
-      subjectRules: [
-        v => !!v || 'Por favor, preencha o assunto',
-        v => v.length >= 5 || 'Preencha um assunto válido',
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'Por favor, preencha o e-mail',
-        v => /.+@.+/.test(v) || 'O e-mail precisa ser válido',
-      ],
-      message: '',
-      messageRules: [
-        v => !!v || 'Por favor, preencha a mensagem',
-        v => v.length >= 10 || 'Preencha uma mensagem válida',
-      ],
-    }),
+    data() {
+        return {
+            loading: false,
+            form: {
+                name: '',
+                subject: '',
+                email: '',
+                message: ''
+            },
+            rules:{
+                nameRules: [
+                    v => !!v || 'Por favor, preencha o nome',
+                    v => v.length >= 10 || 'O nome precisa ter mais de 10 caracteres',
+                ],
+                subjectRules: [
+                    v => !!v || 'Por favor, preencha o assunto',
+                    v => v.length >= 5 || 'Preencha um assunto válido',
+                ],
+                
+                emailRules: [
+                    v => !!v || 'Por favor, preencha o e-mail',
+                    v => /.+@.+/.test(v) || 'O e-mail precisa ser válido',
+                ],
+                messageRules: [
+                    v => !!v || 'Por favor, preencha a mensagem',
+                    v => v.length >= 10 || 'Preencha uma mensagem válida',
+                ],
+            }
+        }
+    },
+    methods: {
+        sendEmail(){
+            if (this.$refs.form.validate()) {
+                this.loading = true;
+                this.$store.dispatch("sendMail/sendMessage", this.form).then(() => {
+                    this.clear();
+                    this.loading = false;
+                });
+            }
+        },
+        clear() {
+            this.form = {
+                name: '',
+                subject: '',
+                email: '',
+                message: '',
+            };
+        },
+    },
   }
 </script>
-<style scoped>
->>> .paralax{
-    background-image: url("../assets/liviaContact.jpg") !important;
-    /* background-repeat: no-repeat, repeat-y; */
-    background-color: #d6d5d5;
-    background-position: center top;
-    background-attachment: fixed;
-}
->>> .text-contact{
-    color: #BF8924;
-    font-size: 1.3em;
-}
->>> .icon-contact{
-    background-image: linear-gradient(
-    45deg,
-    #a96e1f,
-    #bf8924,
-    #d9a91a
-  ) !important;
-    padding: 15px;
-    border-radius: 30px;
-    margin-bottom: 10px;
-}
->>> .v-parallax__content{
-    padding: 0;
-}
->>>.button-send{
-    color:#D9A91A !important;
-    letter-spacing: 2px;
-    padding: 30px 30px 30px 30px !important;
-    border-radius: 30px;
-}
+<style scoped lang="sass">
+@mixin color-gradient-text
+  background-image: radial-gradient(circle at 58.46% 50%, #ac8b4a 0, #a27a37 25%, #956521 50%, #885008 75%, #7e3f00 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
-@media  screen and (max-width: 800px){
-    >>> .paralax{
-        background-image: url("../assets/liviaContactMobile.jpg") !important;
-    }
-}
+@mixin color-gradient-item
+  background-image: radial-gradient(circle at 58.46% 50%, #ac8b4a 0, #a27a37 25%, #956521 50%, #885008 75%, #7e3f00 100%)
+
+.paralax
+    background-image: url("../assets/liviaContact.jpg") !important
+    background-color: #d6d5d5
+    background-position: center top
+    background-attachment: fixed
+
+.text-contact
+    @include color-gradient-text
+    font-size: 1.3em
+
+.icon-contact
+    @include color-gradient-item
+    padding: 15px
+    border-radius: 30px
+    margin-bottom: 10px
+
+.v-parallax__content
+    padding: 0
+
+.button-send
+    color:#D9A91A !important
+    letter-spacing: 2px
+    padding: 30px 30px 30px 30px !important
+    border-radius: 30px
+
+
+@media  screen and (max-width: 800px)
+    .paralax
+        background-image: url("../assets/liviaContactMobile.jpg") !important
+    
+
 </style>
