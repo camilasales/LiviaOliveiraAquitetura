@@ -136,16 +136,15 @@
 
 
     <!-- comentarios -->
-    <v-row no-gutters class="px-10 py-10">
-      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
+    <v-row  no-gutters class="px-10 py-10 d-flex " >
+      <v-col v-for="(item, index) in coments" :key="index" class="d-flex flex-column justify-space-between align-center pa-2 mb-4 coments-people">
         <img
           height="45px"
           width="45px"
           :src="require('@/assets/img/icons/icon_comentario.png')"
         >
-        <span style="color:#ffffff; text-align: center;" class=" pt-8">
-          Boa Lívia! Você foi a mais detalhista e caprichosa de todas as arquitetas que me enviaram orçamento. 
-          Esta de parabéns pelo seu trabalho!
+        <span style="color:#ffffff; text-align: center;" class="px-3 pt-8">
+          {{item.text}}
         </span>
         <div class="my-8 px-10 d-flex">
             <hr
@@ -153,62 +152,16 @@
                 width="100px"
             />
         </div>
-        <v-avatar>
-          <img
-            :src="require('@/assets/img/coments/coments_foto.png')"
-            alt="John"
-          >
-        </v-avatar>
-        <span style="color:#ffffff;">Vitor - Engenharia Valor</span>
+          <!-- <v-avatar>
+            <img
+              :src="require('@/assets/img/coments/coments_foto.png')"
+              alt="John"
+            >
+          </v-avatar> -->
+          <span style="color:#ffffff;" class="mb-2">{{item.name}}</span>
       </v-col>
 
-      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
-        <img
-          height="45px"
-          width="45px"
-          :src="require('@/assets/img/icons/icon_comentario.png')"
-        >
-        <span style="color:#ffffff; text-align: center;" class=" pt-8">
-          Amamos! <br> Ficou do jeitinho que queríamos. 
-        </span>
-        <div class="my-8 px-10 d-flex">
-            <hr
-                style="height:1px; background-color: #6c4711; border-style: none;"
-                width="100px"
-            />
-        </div>
-        <v-avatar>
-          <img
-            :src="require('@/assets/img/coments/coments_foto.png')"
-            alt="John"
-          >
-        </v-avatar>
-        <span style="color:#ffffff;">Maria - Projeto Arquitetônico</span>
-      </v-col>
-
-      <v-col class="d-flex flex-column justify-center align-center pa-2 mb-4 coments-people">
-        <img
-          height="45px"
-          width="45px"
-          :src="require('@/assets/img/icons/icon_comentario.png')"
-        >
-        <span style="color:#ffffff; text-align: center;" class=" pt-8">
-          Foi e está sendo uma excelente experiència. Eu já 
-        </span>
-        <div class="my-8 px-10 d-flex">
-            <hr
-                style="height:1px; background-color: #6c4711; border-style: none;"
-                width="100px"
-            />
-        </div>
-        <v-avatar class="d-flex flex-column justify-center align-center ">
-          <img
-            :src="require('@/assets/img/coments/coments_foto.png')"
-            alt="John"
-          >
-        </v-avatar>
-        <span style="color:#ffffff;">Maryanna - Projeto de Interiores</span>
-      </v-col>
+    
     </v-row>
     <!-- fim comentarios -->
   </div>
@@ -218,7 +171,29 @@
 // @ is an alias to /src
 
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+        coments:[
+          {
+            name: 'Vitor - Engenharia Valor',
+            text: 'Boa Lívia! Você foi a mais detalhista e caprichosa de todas as arquitetas que me enviaram orçamento. Esta de parabéns pelo seu trabalho!',
+            urlPicture: null
+          },
+          {
+            name: 'Maria - Projeto Arquitetônico',
+            text: 'Amamos! Ficou do jeitinho que queríamos.',
+            urlPicture: null
+          },
+          {
+            name: 'Maryanna - Projeto de Interiores',
+            text: 'Foi e está sendo uma excelente experiência. Eu já tive várias ideias para o quarto das meninas, porém, o projeto me fez visualizar o mesmo, encontrar os itens... Foi determinante, com certeza. Ajudou muito no planejamento, pois já estava dentro do orçamento e com os itens que queríamos. Achei a eperiência maravilhosa, como já comentei... E sinceramente, se tivesse condições financeiras, faria projeto com mais cômodos do apartamento.',
+            urlPicture: null
+          },
+        ]
+    }
+  },
+
 };
 </script>
 <style scoped lang="sass">

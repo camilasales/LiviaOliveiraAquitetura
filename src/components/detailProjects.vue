@@ -5,21 +5,21 @@
         <v-card-title>
           <div>
             <v-btn
-              class="menu-actions pa-6"
+              class="menu-actions mt-3 mr-4"
               absolute
               top
               right
               icon
               @click="dialog = !dialog"
             >
-              <a><img :src="require('@/assets/close.png')"/></a>
+              <a><img :src="require('@/assets/img/icons/icon_close.png')"/></a>
             </v-btn>
           </div>
         </v-card-title>
         <v-col class="d-flex align-center justify-center" v-if="loading">
           <v-progress-circular
             :size="50"
-            color="#d3931e"
+            color="#6c4711"
             indeterminate
           ></v-progress-circular>
         </v-col>
@@ -99,7 +99,7 @@ export default {
 </script>
 <style scoped>
 >>> .menu-actions {
-  color: #d3931e !important;
+  color: #6c4711 !important;
   font-size: 20px !important;
   letter-spacing: 2px !important;
 }

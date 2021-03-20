@@ -29,7 +29,7 @@
                     :src="require('@/assets/img/icons/icon_phone.png')"
                 >
                 <span class="text-contact">Telefone</span>
-                <span class="text-contact">(11)111111-1111</span>
+                <span class="text-contact">(11)95132-3947</span>
             </div>
             <div class="d-flex flex-column justify-center align-center">
                 <img
@@ -37,7 +37,7 @@
                     :src="require('@/assets/img/icons/icon_email.png')"
                 >
                 <span class="text-contact">E-mail</span>
-                <span class="text-contact">email@email.com</span>
+                <span class="text-contact">liviaoliveira_arq@hotmail.com</span>
             </div>
         </v-row>
 
