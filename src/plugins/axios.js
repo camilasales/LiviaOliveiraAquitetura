@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import axios from 'axios'
+import Vue from "vue";
+import axios from "axios";
 
 const instance = axios.create({
-    baseURL: `http://localhost:8080/`
-})
+  baseURL: `https://livia-arquitetura-api.herokuapp.com/`,
+});
 Vue.use({
-  install(Vue){
+  install(Vue) {
     Vue.prototype.$http = axios;
-  }
-})
+  },
+});
 
-export default instance
+export default instance;

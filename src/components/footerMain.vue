@@ -1,10 +1,7 @@
 <template>
   <div style="background-color:#111111">
     <div class="my-10 px-10 d-flex">
-      <hr
-        width="100%"
-        class="border-line"
-      />
+      <hr width="100%" class="border-line" />
     </div>
     <v-footer color="#111111" style="border-style: none;">
       <v-row class="data-footer">
@@ -35,15 +32,10 @@
             >
           </v-col>
           <v-col>
-            <span class="text">
-              Livia de Sousa Oliveira Arquitetura Ltda </span
+            <span class="text"> Livia de Sousa Oliveira Arquitetura Ltda </span
             ><br />
-            <span class="text">
-              +55 11 95132-3947 </span
-            ><br />
-            <span class="text">
-              São Paulo, Brasil </span
-            ><br />
+            <span class="text"> +55 11 95132-3947 </span><br />
+            <span class="text"> São Paulo, Brasil </span><br />
             <span class="text">
               CAU-SP 2567695
             </span>
@@ -86,10 +78,6 @@ export default {
           src: require("@/assets/img/icons/icon_pinterest.png"),
           href: "https://br.pinterest.com/liviaoliveira_arq/",
         },
-        {
-          src: require("@/assets/img/icons/icon_twitter.png"),
-          href: "#",
-        },
       ],
     };
   },
@@ -104,7 +92,7 @@ export default {
 @mixin color-gradient-item
   background-image: radial-gradient(circle at 58.46% 50%, #ac8b4a 0, #a27a37 25%, #956521 50%, #885008 75%, #7e3f00 100%)
 
-.text 
+.text
   @include color-gradient-text
   font-size: 20px
   letter-spacing: 2px
@@ -114,10 +102,9 @@ export default {
   height:1px
   border-style: none
 
-.data-footer 
+.data-footer
   display: flex
   justify-content: space-between
   align-items: center
   padding: 5px 20px 5px 20px
-
 </style>

@@ -119,9 +119,8 @@ export default {
 };
 </script>
 <style scoped lang="sass">
-.menu-actions 
-  color: #6c4711 !important
+.menu-actions
+  color: #946319 !important
   font-size: 20px !important
   letter-spacing: 2px !important
-
 </style>
