@@ -5,14 +5,14 @@
         <v-card-title>
           <div>
             <v-btn
-              class="menu-actions mt-3 mr-4"
+              class="menu-actions"
               absolute
               top
               right
               icon
               @click="dialog = !dialog"
             >
-              <a><img :src="require('@/assets/img/icons/icon_close.png')"/></a>
+              <v-icon>mdi-close</v-icon>
             </v-btn>
           </div>
         </v-card-title>

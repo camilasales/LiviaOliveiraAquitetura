@@ -37,13 +37,17 @@
         class="pa-10"
       >
         <div class="d-flex flex-column justify-center align-center">
-          <p class="text-contact" style="font-size: 1.5em">
+          <p class="text-contact pb-0 mb-0" style="font-size: 1.5em">
             <span style="font-weight: bold;">Quer falar conosco</span> ou <br />
             tem alguma dúvida?
           </p>
         </div>
-        <div class="d-flex flex-column justify-center align-center">
+        <div
+          class="d-flex flex-column justify-center align-center"
+          :class="$vuetify.breakpoint.mdAndUp ? '' : 'py-6'"
+        >
           <img
+            :height="$vuetify.breakpoint.mdAndUp ? '' : '50px'"
             class="icon-contact"
             :src="require('@/assets/img/icons/icon_phone.png')"
           />
@@ -52,6 +56,7 @@
         </div>
         <div class="d-flex flex-column justify-center align-center">
           <img
+            :height="$vuetify.breakpoint.mdAndUp ? '' : '50px'"
             class="icon-contact"
             :src="require('@/assets/img/icons/icon_email.png')"
           />
@@ -242,4 +247,6 @@ export default {
 @media  screen and (max-width: 800px)
     .paralax
         background-image: url("../assets/liviaContactMobile.jpg") !important
+    .text-contact
+      font-size: 1.1em
 </style>

@@ -140,7 +140,7 @@
           <span>Residencial 50</span>
         </v-img>
       </v-col>
-      <v-col cols="4" md="10" lg="10" sm="4" class="mt-4 mb-12">
+      <v-col cols="10" class="mt-4 mb-12">
         <v-btn
           @click="$router.push({ name: 'Servicos' })"
           outlined

@@ -1,15 +1,15 @@
 <template>
   <div style="background-color:#111111">
-    <div class="my-10 px-10 d-flex">
+    <div class="mt-10 mb-10 px-10 d-flex">
       <hr width="100%" class="border-line" />
     </div>
-    <v-footer color="#111111" style="border-style: none;">
-      <v-row class="data-footer">
+    <v-footer color="#111111" style="border-style: none;" class="pt-0">
+      <v-row class="data-footer pt-0">
         <div>
           <v-col cols="12">
             <span class="text">MÍDIAS SOCIAIS</span>
           </v-col>
-          <v-col cols="12" class="pt-4">
+          <v-col cols="12" class="pt-1">
             <v-btn
               v-for="(item, index) in icons"
               :key="index"
@@ -21,7 +21,7 @@
               </a>
             </v-btn>
           </v-col>
-          <v-col class="my-4">
+          <v-col :class="$vuetify.breakpoint.mdAndUp ? 'my-2' : ''">
             <v-btn
               outlined
               style="color:#6c4711; padding: 20px 20px 20px 20px"
@@ -107,4 +107,8 @@ export default {
   justify-content: space-between
   align-items: center
   padding: 5px 20px 5px 20px
+
+@media  screen and (max-width: 800px)
+    .text
+       font-size: 17px
 </style>

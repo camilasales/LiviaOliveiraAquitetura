@@ -20,7 +20,7 @@
         "
       >
         <v-col class="text-description-col">
-          <p class="title-livia">Livia Oliveira</p>
+          <p v-if="viewPage" class="title-livia">Livia Oliveira</p>
           <p>
             Com estilo contemporâneo e sofisticado, a arquiteta Livia Oliveira
             comanda o escritório que leva seu nome, atuando nas áreas de
@@ -46,7 +46,18 @@
 </template>
 <script>
 import "@/assets/fonts/Brotherhood_Script.ttf";
-export default {};
+export default {
+  data() {
+    return {
+      viewPage: true,
+    };
+  },
+
+  mounted() {
+    this.viewPage = false;
+    this.viewPage = true;
+  },
+};
 </script>
 <style scoped lang="sass">
 @font-face
