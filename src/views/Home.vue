@@ -1,6 +1,6 @@
-<template >
-  <div style="background-color: #111111;" >
-    <div class="home grid-information" >
+<template>
+  <div style="background-color: #111111;">
+    <div class="home grid-information">
       <v-img
         :src="require('@/assets/liviaOliveira.jpg')"
         jumbotron
@@ -10,14 +10,15 @@
       <div class="d-flex information fadeIn">
         <v-col class="font-information">
           <p>
-            Fundado em 2020, localizado na cidade de São Paulo, 
-            o L.O. Arquitetura é focado em projeto arquitetônico e 
-            de interiores no segmento residencial, comercial e corporativo.
+            Fundado em 2020, localizado na cidade de São Paulo, o L.O.
+            Arquitetura é focado em projeto arquitetônico e de interiores no
+            segmento residencial, comercial e corporativo.
           </p>
-          <br>
+          <br />
           <p>
-            Com um design contemporâneo, sofisticação e um atendimento altamente 
-            personalizado, o objetivo é transformar a vida dos clientes proporcionando experiências únicas.
+            Com um design contemporâneo, sofisticação e um atendimento altamente
+            personalizado, o objetivo é transformar a vida dos clientes
+            proporcionando experiências únicas.
           </p>
         </v-col>
       </div>
@@ -31,12 +32,19 @@
           height="45px"
           width="45px"
           :src="require('@/assets/img/icons/icon_regua.png')"
+        />
+        <span class="title-topics"
+          >PROJETO DE INTERIORES (Projeto Executivo de Interiores)</span
         >
-        <span class="title-topics">PROJETO DE INTERIORES (Projeto Executivo de Interiores)</span>
         <span class="title-text">
-          Projeto completo para você realizar sua obra, sendo ela do zero ou uma reforma, 
-          nele constam todas as informações e detalhamentos necessários. <br>
-          <span class="px-2 mt-2" style="background-color:#6c4711; color:#111111; font-size: 20px; margin-top:15px; margin-bottom:15px;">MAIS PEDIDO</span>
+          Projeto completo para você realizar sua obra, sendo ela do zero ou uma
+          reforma, nele constam todas as informações e detalhamentos
+          necessários. <br />
+          <span
+            class="px-2 mt-2"
+            style="background-color:#6c4711; color:#111111; font-size: 20px; margin-top:15px; margin-bottom:15px;"
+            >MAIS PEDIDO</span
+          >
         </span>
       </v-col>
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
@@ -45,14 +53,20 @@
           height="45px"
           width="45px"
           :src="require('@/assets/img/icons/icon_prancheta.png')"
+        />
+        <span class="title-topics"
+          >PROJETO ARQUITETÔNICO (Projeto Executivo de Arquitetura)</span
         >
-        <span class="title-topics">PROJETO ARQUITETÔNICO (Projeto Executivo de Arquitetura)</span>
         <span class="title-text">
-          Projeto completo para você realizar sua obra, sendo ela do zero ou uma reforma, 
-          nele constam todas as informações e detalhamentos necessários. <br>
-          <span class="px-2 mt-2" style="background-color:#6c4711; color:#111111; font-size: 20px; margin-top:15px; margin-bottom:15px;"
-            >
-            MAIS PEDIDO</span>
+          Projeto completo para você realizar sua obra, sendo ela do zero ou uma
+          reforma, nele constam todas as informações e detalhamentos
+          necessários. <br />
+          <span
+            class="px-2 mt-2"
+            style="background-color:#6c4711; color:#111111; font-size: 20px; margin-top:15px; margin-bottom:15px;"
+          >
+            MAIS PEDIDO</span
+          >
         </span>
       </v-col>
       <v-col cols="12" md="4" lg="4" sm="4" class="d-flex flex-column pa-2">
@@ -61,107 +75,112 @@
           height="45px"
           width="45px"
           :src="require('@/assets/img/icons/icon_luminaria.png')"
-        >
+        />
         <span class="title-topics">
           CONSULTORIA DE INTERIORES
         </span>
         <span class="title-text">
-          Projeto simplificado para uma reforma de um ambiente. Pode estar acompanhado ou não do 3D.
+          Projeto simplificado para uma reforma de um ambiente. Pode estar
+          acompanhado ou não do 3D.
         </span>
       </v-col>
       <v-col cols="12" class="mt-14">
-          <v-btn @click="$router.push({name: 'Projetos'})" outlined style="color:#6c4711; padding: 20px 20px 20px 20px" class="pa-7 text">Saiba Mais</v-btn>
+        <v-btn
+          @click="$router.push({ name: 'Projetos' })"
+          outlined
+          style="color:#6c4711; padding: 20px 20px 20px 20px"
+          class="pa-7"
+          >Saiba Mais</v-btn
+        >
       </v-col>
     </v-row>
     <!-- fim servicos -->
 
-
     <!-- projetos -->
-    <v-row no-gutters class="px-10 my-1 mt-6" justify="space-between" >
-      <v-col cols="12" >
-          <p style="color:#6c4711; font-size: 30px; margin-top:15px; margin-bottom:15px;" >PROJETOS</p>
+    <v-row no-gutters class="px-10 my-1 mt-6" justify="space-between">
+      <v-col cols="12">
+        <p
+          style="color:#6c4711; font-size: 30px; margin-top:15px; margin-bottom:15px;"
+        >
+          PROJETOS
+        </p>
       </v-col>
     </v-row>
     <v-row no-gutters class="px-10 list" justify="space-between">
-      <v-col
-        cols="12"
-        sm="12"
-        lg="4"
-        md="4"
-        class="pr-4 mb-4 item-list"
-      >
+      <v-col cols="12" sm="12" lg="4" md="4" class="pr-4 mb-4 item-list">
         <v-img
-          class="img" 
-          aspect-ratio="1" 
-          :src="require('@/assets/img/projects/laranjalPaulista/laranjal_paulista_1.jpg')"
-        >
-        <span>Laranjal Paulista</span>
-        </v-img>
-      </v-col>
-
-      <v-col
-        cols="12"
-        sm="12"
-        lg="4"
-        md="4"
-        class="pr-4 mb-4 item-list"
-      >
-        <v-img 
-          class="img" 
+          class="img"
           aspect-ratio="1"
-         :src="require('@/assets/img/projects/ap1135/ap1135_1.jpeg')">
-        <span>Apartamento 1135</span>
+          :src="
+            require('@/assets/img/projects/laranjalPaulista/laranjal_paulista_1.jpg')
+          "
+        >
+          <span>Laranjal Paulista</span>
         </v-img>
       </v-col>
 
-      <v-col
-        cols="12"
-        sm="12"
-        lg="4"
-        md="4"
-        class="pr-4 mb-4 item-list"
-      >
-        <v-img 
-        class="img" 
-        aspect-ratio="1"
-        :src="require('@/assets/img/projects/residencial50/residencial50_1.jpg')">
-        <span>Residencial 50</span>
+      <v-col cols="12" sm="12" lg="4" md="4" class="pr-4 mb-4 item-list">
+        <v-img
+          class="img"
+          aspect-ratio="1"
+          :src="require('@/assets/img/projects/ap1135/ap1135_1.jpeg')"
+        >
+          <span>Apartamento 1135</span>
         </v-img>
       </v-col>
-       <v-col cols="12" class="mt-4 mb-12">
-          <v-btn @click="$router.push({name: 'Servicos'})" outlined style="color:#6c4711; padding: 20px 20px 20px 20px" class="pa-7 text">Ver todos os projetos</v-btn>
+
+      <v-col cols="12" sm="12" lg="4" md="4" class="pr-4 mb-4 item-list">
+        <v-img
+          class="img"
+          aspect-ratio="1"
+          :src="
+            require('@/assets/img/projects/residencial50/residencial50_1.jpg')
+          "
+        >
+          <span>Residencial 50</span>
+        </v-img>
+      </v-col>
+      <v-col cols="4" md="10" lg="10" sm="4" class="mt-4 mb-12">
+        <v-btn
+          @click="$router.push({ name: 'Servicos' })"
+          outlined
+          style="color:#6c4711;"
+          class="pa-7"
+          >Ver todos os projetos</v-btn
+        >
       </v-col>
     </v-row>
     <!-- fim projetos -->
 
-
     <!-- comentarios -->
-    <v-row  no-gutters class="px-10 py-10 d-flex " >
-      <v-col v-for="(item, index) in coments" :key="index" class="d-flex flex-column justify-space-between align-center pa-2 mb-4 coments-people">
+    <v-row no-gutters class="px-10 py-10 d-flex ">
+      <v-col
+        v-for="(item, index) in coments"
+        :key="index"
+        class="d-flex flex-column justify-space-between align-center pa-2 mb-4 coments-people"
+      >
         <img
           height="45px"
           width="45px"
           :src="require('@/assets/img/icons/icon_comentario.png')"
-        >
+        />
         <span style="color:#ffffff; text-align: center;" class="px-3 pt-8">
-          {{item.text}}
+          {{ item.text }}
         </span>
         <div class="my-8 px-10 d-flex">
-            <hr
-                style="height:1px; background-color: #6c4711; border-style: none;"
-                width="100px"
-            />
+          <hr
+            style="height:1px; background-color: #6c4711; border-style: none;"
+            width="100px"
+          />
         </div>
-          <!-- <v-avatar>
+        <!-- <v-avatar>
             <img
               :src="require('@/assets/img/coments/coments_foto.png')"
               alt="John"
             >
           </v-avatar> -->
-          <span style="color:#ffffff;" class="mb-2">{{item.name}}</span>
+        <span style="color:#ffffff;" class="mb-2">{{ item.name }}</span>
       </v-col>
-
-    
     </v-row>
     <!-- fim comentarios -->
   </div>
@@ -174,26 +193,27 @@ export default {
   name: "Home",
   data() {
     return {
-        coments:[
-          {
-            name: 'Vitor - Engenharia Valor',
-            text: 'Boa Lívia! Você foi a mais detalhista e caprichosa de todas as arquitetas que me enviaram orçamento. Esta de parabéns pelo seu trabalho!',
-            urlPicture: null
-          },
-          {
-            name: 'Maria - Projeto Arquitetônico',
-            text: 'Amamos! Ficou do jeitinho que queríamos.',
-            urlPicture: null
-          },
-          {
-            name: 'Maryanna - Projeto de Interiores',
-            text: 'Foi e está sendo uma excelente experiência. Eu já tive várias ideias para o quarto das meninas, porém, o projeto me fez visualizar o mesmo, encontrar os itens... Foi determinante, com certeza. Ajudou muito no planejamento, pois já estava dentro do orçamento e com os itens que queríamos. Achei a eperiência maravilhosa, como já comentei... E sinceramente, se tivesse condições financeiras, faria projeto com mais cômodos do apartamento.',
-            urlPicture: null
-          },
-        ]
-    }
+      coments: [
+        {
+          name: "Vitor - Engenharia Valor",
+          text:
+            "Boa Lívia! Você foi a mais detalhista e caprichosa de todas as arquitetas que me enviaram orçamento. Esta de parabéns pelo seu trabalho!",
+          urlPicture: null,
+        },
+        {
+          name: "Maria - Projeto Arquitetônico",
+          text: "Amamos! Ficou do jeitinho que queríamos.",
+          urlPicture: null,
+        },
+        {
+          name: "Maryanna - Projeto de Interiores",
+          text:
+            "Foi e está sendo uma excelente experiência. Eu já tive várias ideias para o quarto das meninas, porém, o projeto me fez visualizar o mesmo, encontrar os itens... Foi determinante, com certeza. Ajudou muito no planejamento, pois já estava dentro do orçamento e com os itens que queríamos. Achei a eperiência maravilhosa, como já comentei... E sinceramente, se tivesse condições financeiras, faria projeto com mais cômodos do apartamento.",
+          urlPicture: null,
+        },
+      ],
+    };
   },
-
 };
 </script>
 <style scoped lang="sass">
@@ -202,50 +222,50 @@ export default {
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
-.list 
+.list
   list-style: none
   margin: 0
   padding: 0
   display: flex
 
-.list .item-list 
+.list .item-list
   flex: 1
 
-.list .item-list span 
+.list .item-list span
   display: block
   background: rgba(0, 0, 0, 0.685)
   padding: 1.7rem
   font-size: 22px
   margin-top: 25rem
-  color: #BF8924  
+  color: #BF8924
 
 
-@media (hover: hover) 
-  .list .item-list span 
+@media (hover: hover)
+  .list .item-list span
     transform: translateY(100px)
     transition: 0.2s
-  
-  .list:hover span 
+
+  .list:hover span
     transform: translateY(0)
-  
-  .list .item-list:nth-child(1) span 
+
+  .list .item-list:nth-child(1) span
     transition-delay: 0.0s
-  
-  .list .item-list:nth-child(2) span 
+
+  .list .item-list:nth-child(2) span
     transition-delay: 0.05s
-  
-  .list .item-list:nth-child(3) span 
+
+  .list .item-list:nth-child(3) span
     transition-delay: 0.1s
-  
-  .list .item-list:nth-child(4) span 
+
+  .list .item-list:nth-child(4) span
     transition-delay: 0.15s
-  
-  .list .item-list:nth-child(5) span 
+
+  .list .item-list:nth-child(5) span
     transition-delay: 0.2s
-  
-  .list .item-list:nth-child(6) span 
+
+  .list .item-list:nth-child(6) span
     transition-delay: 0.25s
-  
+
 
 
 #imgHome
@@ -295,34 +315,32 @@ export default {
   padding: 20px
 
 
-@keyframes fadeIn 
-  opacity: 0 
-  opacity: 0.8 
+@keyframes fadeIn
+  opacity: 0
+  opacity: 0.8
 
-.fadeIn 
+.fadeIn
   -webkit-animation: fadeIn 3s ease-in-out
   -moz-animation: fadeIn 3s ease-in-out
   -o-animation: fadeIn 3s ease-in-out
   animation: fadeIn 3s ease-in-out
 
 
-@media  screen and (max-width: 1024px) 
+@media  screen and (max-width: 1024px)
   .grid-information
     grid-template-columns: 30fr 35fr
-  
 
-@media  screen and (max-width: 768px) 
+
+@media  screen and (max-width: 768px)
   .grid-information
     grid-template-columns: 10fr 25fr
-  
 
-@media  screen and (max-width: 360px) 
+
+@media  screen and (max-width: 360px)
   .grid-information
       grid-template-rows: 20vh auto 15vh auto
-  
+
   .information
     margin-right: 10px
      padding: 10px
-  
-
 </style>
