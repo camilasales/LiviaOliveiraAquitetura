@@ -13,32 +13,30 @@
         >
           <v-hover v-slot="{ hover }">
             <div class="on-hover">
-              <v-img class="img" :src="item" aspect-ratio="1" >
+              <v-img class="img" :src="item" aspect-ratio="1">
                 <div
-                  @click="setDialog(item.id)"
+                  @click="setDialog(item.id, item.name)"
                   v-if="$vuetify.breakpoint.mdAndUp"
                   :class="{ 'show-btns': hover }"
                   :style="hover ? 'opacity: 100%' : 'opacity: 0.0'"
                 >
                   <v-row class="d-flex flex-column mx-3">
-                    <span
-                      class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }} 
-                      <p class="body-1">Ver mais</p> 
+                    <span class="d-flex flex-column justify-center align-center"
+                      >{{ item.name }}
+                      <p class="body-1">Ver mais</p>
                     </span>
                   </v-row>
                 </div>
                 <div
-                  @click="setDialog(item.id)"
+                  @click="setDialog(item.id, item.name)"
                   v-else
                   style="background-color: #000000a1; height:100%"
                   class="justify-center align-center"
                 >
                   <v-row class="d-flex flex-column mx-3">
-                    <span
-                      class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }} 
-                      <p class="body-1">Ver mais</p> 
+                    <span class="d-flex flex-column justify-center align-center"
+                      >{{ item.name }}
+                      <p class="body-1">Ver mais</p>
                     </span>
                   </v-row>
                 </div>
@@ -49,6 +47,7 @@
             v-model="openDetailProject"
             v-if="openDetailProject"
             :projectId="projectId"
+            :projectName="projectName"
           ></detailProjects>
         </v-col>
       </v-row>
@@ -68,6 +67,7 @@ export default {
       id: 1,
       openDetailProject: false,
       projectId: null,
+      projectName: "",
     };
   },
   computed: {
@@ -79,9 +79,10 @@ export default {
     this.$store.dispatch("projects/getAllProjects");
   },
   methods: {
-    setDialog(id) {
+    setDialog(id, name) {
       this.openDetailProject = true;
       this.projectId = id;
+      this.projectName = name;
     },
   },
 };
@@ -92,14 +93,14 @@ export default {
 }
 .on-hover .img {
   max-width: 100%;
-	-moz-transition: all 0.8s;
-	-webkit-transition: all 0.8s;
-	transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 .on-hover:hover .img {
   -moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
   transition: 0.8s ease-in-out;
 }
 

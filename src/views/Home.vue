@@ -86,7 +86,7 @@
       </v-col>
       <v-col cols="12" class="mt-14">
         <v-btn
-          @click="$router.push({ name: 'Projetos' })"
+          @click="$router.push({ name: 'Servicos' })"
           outlined
           style="color:#6c4711; padding: 20px 20px 20px 20px"
           class="pa-7"
@@ -142,7 +142,7 @@
       </v-col>
       <v-col cols="10" class="mt-4 mb-12">
         <v-btn
-          @click="$router.push({ name: 'Servicos' })"
+          @click="$router.push({ name: 'Projetos' })"
           outlined
           style="color:#6c4711;"
           class="pa-7"
@@ -153,33 +153,42 @@
     <!-- fim projetos -->
 
     <!-- comentarios -->
-    <v-row no-gutters class="px-10 py-10 d-flex ">
+    <v-row no-gutters class="px-10 py-10 ">
       <v-col
         v-for="(item, index) in coments"
         :key="index"
-        class="d-flex flex-column justify-space-between align-center pa-2 mb-4 coments-people"
+        cols="12"
+        sm="12"
+        lg="4"
+        md="4"
+        class="d-flex flex-row justify-space-between"
       >
-        <img
-          height="45px"
-          width="45px"
-          :src="require('@/assets/img/icons/icon_comentario.png')"
-        />
-        <span style="color:#ffffff; text-align: center;" class="px-3 pt-8">
-          {{ item.text }}
-        </span>
-        <div class="my-8 px-10 d-flex">
-          <hr
-            style="height:1px; background-color: #6c4711; border-style: none;"
-            width="100px"
+        <v-col
+          class="d-flex flex-column justify-space-between align-center pa-2 mb-4 coments-people"
+        >
+          <img
+            height="45px"
+            width="45px"
+            :src="require('@/assets/img/icons/icon_comentario.png')"
           />
-        </div>
-        <!-- <v-avatar>
+          <span style="color:#ffffff; text-align: center;" class="px-3 pt-8">
+            {{ item.text }}
+          </span>
+          <div class="mt-8 px-2 d-flex flex-column align-center justify-center">
+            <hr
+              style="height:1px; background-color: #6c4711; border-style: none;"
+              width="100px"
+            />
+            <span style="color:#ffffff;" class="mt-4">{{ item.name }}</span>
+            <span style="color:#ffffff;" class="mb-2">{{ item.project }}</span>
+          </div>
+          <!-- <v-avatar>
             <img
               :src="require('@/assets/img/coments/coments_foto.png')"
               alt="John"
             >
           </v-avatar> -->
-        <span style="color:#ffffff;" class="mb-2">{{ item.name }}</span>
+        </v-col>
       </v-col>
     </v-row>
     <!-- fim comentarios -->
@@ -195,20 +204,30 @@ export default {
     return {
       coments: [
         {
-          name: "Vitor - Engenharia Valor",
+          name: "Vitor",
+          project: "Engenharia Valor",
           text:
-            "Boa Lívia! Você foi a mais detalhista e caprichosa de todas as arquitetas que me enviaram orçamento. Esta de parabéns pelo seu trabalho!",
+            "Foi a primeira vez que contratamos uma Arquiteta e foi uma excelente experiência, só temos elogios. Passamos por alguns momentos de mudanças nas nossas vidas durante o projeto e a Lívia sempre esteve lá entendendo tudo e nos ajudando.\n Excelente profissional, soube captar o que queríamos e transformou os nossos sonhos e idéias em um lindo apartamento.",
           urlPicture: null,
         },
         {
-          name: "Maria - Projeto Arquitetônico",
-          text: "Amamos! Ficou do jeitinho que queríamos.",
-          urlPicture: null,
-        },
-        {
-          name: "Maryanna - Projeto de Interiores",
+          name: "Maryanna",
+          project: "Projeto de Interiores",
           text:
             "Foi e está sendo uma excelente experiência. Eu já tive várias ideias para o quarto das meninas, porém, o projeto me fez visualizar o mesmo, encontrar os itens... Foi determinante, com certeza. Ajudou muito no planejamento, pois já estava dentro do orçamento e com os itens que queríamos. Achei a eperiência maravilhosa, como já comentei... E sinceramente, se tivesse condições financeiras, faria projeto com mais cômodos do apartamento.",
+          urlPicture: null,
+        },
+        {
+          name: "Milanezi",
+          project: "Engenharia e Construção",
+          text:
+            "Gostei muito do atendimento e profissionalismo do escritório! Profisionais sempre prontos para atender as demandas.",
+          urlPicture: null,
+        },
+        {
+          name: "Maria",
+          project: "Projeto Arquitetônico",
+          text: "Amamos! Ficou do jeitinho que queríamos.",
           urlPicture: null,
         },
       ],
