@@ -4,32 +4,6 @@ const state = {
   listProjects: [
     {
       id: "1",
-      src: require("@/assets/img/projects/ap603/ap603_1.jpg"),
-      name: "Apartamento 603",
-      images: [
-        require("@/assets/img/projects/ap603/ap603_1.jpg"),
-        require("@/assets/img/projects/ap603/ap603_2.jpg"),
-        require("@/assets/img/projects/ap603/ap603_3.jpg"),
-        require("@/assets/img/projects/ap603/ap603_4.jpg"),
-      ],
-    },
-    {
-      id: "2",
-      src: require("@/assets/img/projects/ap1135/ap1135_1.jpeg"),
-      name: "Apartamento 1135",
-      images: [
-        require("@/assets/img/projects/ap1135/ap1135_1.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_2.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_3.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_4.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_5.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_6.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_7.jpeg"),
-        require("@/assets/img/projects/ap1135/ap1135_8.jpeg"),
-      ],
-    },
-    {
-      id: "3",
       src: require("@/assets/img/projects/laranjalPaulista/laranjal_paulista_1.jpg"),
       name: "Laranjal Paulista",
       images: [
@@ -49,50 +23,10 @@ const state = {
         require("@/assets/img/projects/laranjalPaulista/laranjal_paulista_14.jpg"),
       ],
     },
+
     {
-      id: "4",
-      src: require("@/assets/img/projects/residencial50/residencial50_1.jpg"),
-      name: "Residencial 50",
-      images: [
-        require("@/assets/img/projects/residencial50/residencial50_1.jpg"),
-      ],
-    },
-    {
-      id: "5",
-      src: require("@/assets/img/projects/casaPerdizes/casa_perdizes_1.jpg"),
-      name: "Casa Predizes",
-      images: [
-        require("@/assets/img/projects/casaPerdizes/casa_perdizes_1.jpg"),
-        require("@/assets/img/projects/casaPerdizes/casa_perdizes_2.jpg"),
-        require("@/assets/img/projects/casaPerdizes/casa_perdizes_3.jpg"),
-        require("@/assets/img/projects/casaPerdizes/casa_perdizes_4.jpg"),
-      ],
-    },
-    {
-      id: "6",
-      src: require("@/assets/img/projects/planoButanta/plano_butanta_1.jpg"),
-      name: "Plano Butantã",
-      images: [
-        require("@/assets/img/projects/planoButanta/plano_butanta_1.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_2.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_3.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_4.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_5.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_6.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_7.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_8.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_9.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_10.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_11.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_12.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_13.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_14.jpg"),
-        require("@/assets/img/projects/planoButanta/plano_butanta_15.jpg"),
-      ],
-    },
-    {
-      id: "7",
-      src: require("@/assets/img/projects/residencialManhattan/residencial_manhatan_1.jpg"),
+      id: "2",
+      src: require("@/assets/img/projects/residencialManhattan/residencial_manhatan_26.jpg"),
       name: "Residencial Manhattan",
       images: [
         require("@/assets/img/projects/residencialManhattan/residencial_manhatan_1.jpg"),
@@ -130,8 +64,56 @@ const state = {
         require("@/assets/img/projects/residencialManhattan/residencial_manhatan_33.jpg"),
       ],
     },
+
     {
-      id: "8",
+      id: "3",
+      src: require("@/assets/img/projects/planoButanta/plano_butanta_1.jpg"),
+      name: "Plano Butantã",
+      images: [
+        require("@/assets/img/projects/planoButanta/plano_butanta_1.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_2.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_3.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_4.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_5.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_6.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_7.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_8.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_9.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_10.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_11.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_12.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_13.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_14.jpg"),
+        require("@/assets/img/projects/planoButanta/plano_butanta_15.jpg"),
+      ],
+    },
+
+    {
+      id: "4",
+      src: require("@/assets/img/projects/casaPerdizes/casa_perdizes_1.jpg"),
+      name: "Casa Perdizes",
+      images: [
+        require("@/assets/img/projects/casaPerdizes/casa_perdizes_1.jpg"),
+        require("@/assets/img/projects/casaPerdizes/casa_perdizes_2.jpg"),
+        require("@/assets/img/projects/casaPerdizes/casa_perdizes_3.jpg"),
+        require("@/assets/img/projects/casaPerdizes/casa_perdizes_4.jpg"),
+      ],
+    },
+
+    {
+      id: "5",
+      src: require("@/assets/img/projects/ap603/ap603_1.jpg"),
+      name: "Apartamento 603",
+      images: [
+        require("@/assets/img/projects/ap603/ap603_1.jpg"),
+        require("@/assets/img/projects/ap603/ap603_2.jpg"),
+        require("@/assets/img/projects/ap603/ap603_3.jpg"),
+        require("@/assets/img/projects/ap603/ap603_4.jpg"),
+      ],
+    },
+
+    {
+      id: "6",
       src: require("@/assets/img/projects/residencialPiracicaba/residencial_piracicaba_1.jpg"),
       name: "Residencial Piracicaba",
       images: [
@@ -145,6 +127,31 @@ const state = {
         require("@/assets/img/projects/residencialPiracicaba/residencial_piracicaba_8.jpg"),
         require("@/assets/img/projects/residencialPiracicaba/residencial_piracicaba_9.jpg"),
         require("@/assets/img/projects/residencialPiracicaba/residencial_piracicaba_10.jpg"),
+      ],
+    },
+
+    {
+      id: "7",
+      src: require("@/assets/img/projects/ap1135/ap1135_1.jpeg"),
+      name: "Apartamento 1135",
+      images: [
+        require("@/assets/img/projects/ap1135/ap1135_1.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_2.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_3.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_4.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_5.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_6.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_7.jpeg"),
+        require("@/assets/img/projects/ap1135/ap1135_8.jpeg"),
+      ],
+    },
+
+    {
+      id: "8",
+      src: require("@/assets/img/projects/residencial50/residencial50_1.jpg"),
+      name: "Residencial 50",
+      images: [
+        require("@/assets/img/projects/residencial50/residencial50_1.jpg"),
       ],
     },
   ],

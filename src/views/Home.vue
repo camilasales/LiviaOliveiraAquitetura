@@ -204,8 +204,8 @@ export default {
     return {
       coments: [
         {
-          name: "Vitor",
-          project: "Engenharia Valor",
+          name: "Alex Beijos e Larissa Perdomo",
+          project: "Projeto de Interiores",
           text:
             "Foi a primeira vez que contratamos uma Arquiteta e foi uma excelente experiência, só temos elogios. Passamos por alguns momentos de mudanças nas nossas vidas durante o projeto e a Lívia sempre esteve lá entendendo tudo e nos ajudando.\n Excelente profissional, soube captar o que queríamos e transformou os nossos sonhos e idéias em um lindo apartamento.",
           urlPicture: null,
@@ -222,12 +222,6 @@ export default {
           project: "Engenharia e Construção",
           text:
             "Gostei muito do atendimento e profissionalismo do escritório! Profisionais sempre prontos para atender as demandas.",
-          urlPicture: null,
-        },
-        {
-          name: "Maria",
-          project: "Projeto Arquitetônico",
-          text: "Amamos! Ficou do jeitinho que queríamos.",
           urlPicture: null,
         },
       ],
