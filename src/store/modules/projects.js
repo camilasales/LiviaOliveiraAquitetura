@@ -26,7 +26,7 @@ const state = {
 
     {
       id: "2",
-      src: require("@/assets/img/projects/residencialManhattan/residencial_manhatan_26.jpg"),
+      src: require("@/assets/img/projects/residencialManhattan/residencial_manhatan_27.jpg"),
       name: "Residencial Manhattan",
       images: [
         require("@/assets/img/projects/residencialManhattan/residencial_manhatan_1.jpg"),

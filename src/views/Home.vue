@@ -123,9 +123,11 @@
         <v-img
           class="img"
           aspect-ratio="1"
-          :src="require('@/assets/img/projects/ap1135/ap1135_1.jpeg')"
+          :src="
+            require('@/assets/img/projects/residencialManhattan/residencial_manhatan_27.jpg')
+          "
         >
-          <span>Apartamento 1135</span>
+          <span>Residencial Manhattan</span>
         </v-img>
       </v-col>
 
@@ -134,10 +136,10 @@
           class="img"
           aspect-ratio="1"
           :src="
-            require('@/assets/img/projects/residencial50/residencial50_1.jpg')
+            require('@/assets/img/projects/planoButanta/plano_butanta_1.jpg')
           "
         >
-          <span>Residencial 50</span>
+          <span>Plano Butanta</span>
         </v-img>
       </v-col>
       <v-col cols="10" class="mt-4 mb-12">
