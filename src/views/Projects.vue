@@ -30,7 +30,7 @@
                 <div
                   @click="setDialog(item.id, item.name)"
                   v-else
-                  style="background-color: #000000a1; height:100%"
+                  style="background-color: #000000a1; height:100%; opacity: 100%"
                   class="justify-center align-center"
                 >
                   <v-row class="d-flex flex-column mx-3">
