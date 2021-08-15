@@ -24,10 +24,18 @@
           @click="openDialog(item.name, item.description)"
           v-for="(item, index) in projetos"
           :key="index"
-          class="btn-service"
+          class="btn-service elevation-6"
         >
           <span class="title-text">{{ item.name }}</span>
-          <img :src="require('@/assets/img/icons/mais.png')" />
+          <div
+            absolute
+            top
+            right
+            style="padding-left: 40px; padding-top: 11px;"
+          >
+            <span class="body-1 caption">Clique para mais detalhes</span>
+            <!-- <img :src="require('@/assets/img/icons/mais.png')" /> -->
+          </div>
         </div>
       </v-col>
       <!-- fim projetos -->
@@ -53,12 +61,20 @@
         </div>
         <div
           @click="openDialog(item.nameInside, item.description)"
-          class="btn-service"
+          class="btn-service elevation-6"
           v-for="(item, index) in consultorias"
           :key="index"
         >
           <span class="title-text">{{ item.name }}</span>
-          <img :src="require('@/assets/img/icons/mais.png')" />
+          <div
+            absolute
+            top
+            right
+            style="padding-left: 40px; padding-top: 11px;"
+          >
+            <span class="body-1 caption">Clique para mais detalhes</span>
+            <!-- <img :src="require('@/assets/img/icons/mais.png')" /> -->
+          </div>
         </div>
       </v-col>
       <!-- fim consultorias -->
@@ -84,12 +100,20 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service"
+          class="btn-service elevation-6"
           v-for="(item, index) in orcamentos"
           :key="index"
         >
           <span class="title-text">{{ item.name }}</span>
-          <img :src="require('@/assets/img/icons/mais.png')" />
+          <div
+            absolute
+            top
+            right
+            style="padding-left: 40px; padding-top: 11px;"
+          >
+            <span class="body-1 caption">Clique para mais detalhes</span>
+            <!-- <img :src="require('@/assets/img/icons/mais.png')" /> -->
+          </div>
         </div>
       </v-col>
       <!-- fim orcamento -->
@@ -115,12 +139,20 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service"
+          class="btn-service elevation-6"
           v-for="(item, index) in obras"
           :key="index"
         >
           <span class="title-text">{{ item.name }}</span>
-          <img :src="require('@/assets/img/icons/mais.png')" />
+          <div
+            absolute
+            top
+            right
+            style="padding-left: 40px; padding-top: 11px;"
+          >
+            <span class="body-1 caption">Clique para mais detalhes</span>
+            <!-- <img :src="require('@/assets/img/icons/mais.png')" /> -->
+          </div>
         </div>
       </v-col>
       <!-- fim obras -->
@@ -146,12 +178,20 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service"
+          class="btn-service elevation-6"
           v-for="(item, index) in emBreve"
           :key="index"
         >
           <span class="title-text">{{ item.name }}</span>
-          <img :src="require('@/assets/img/icons/mais.png')" />
+          <div
+            absolute
+            top
+            right
+            style="padding-left: 40px; padding-top: 11px;"
+          >
+            <span class="body-1 caption">Clique para mais detalhes</span>
+            <!-- <img :src="require('@/assets/img/icons/mais.png')" /> -->
+          </div>
         </div>
       </v-col>
       <!-- fim em breve -->
