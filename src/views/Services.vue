@@ -22,7 +22,7 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service d-flex align-center justify-space-between"
+          class="btn-service"
           v-for="(item, index) in projetos"
           :key="index"
         >
@@ -53,7 +53,7 @@
         </div>
         <div
           @click="openDialog(item.nameInside, item.description)"
-          class="btn-service d-flex align-center justify-space-between"
+          class="btn-service"
           v-for="(item, index) in consultorias"
           :key="index"
         >
@@ -84,7 +84,7 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service d-flex align-center justify-space-between"
+          class="btn-service"
           v-for="(item, index) in orcamentos"
           :key="index"
         >
@@ -115,7 +115,7 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service d-flex align-center justify-space-between"
+          class="btn-service"
           v-for="(item, index) in obras"
           :key="index"
         >
@@ -146,7 +146,7 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service d-flex align-center justify-space-between"
+          class="btn-service"
           v-for="(item, index) in emBreve"
           :key="index"
         >
@@ -357,6 +357,11 @@ export default {
     text-align: start
     margin-bottom: 6vh
     width: 300px
+    display: flex
+    display: -webkit-flex
+    -webkit-flex-direction: row
+    align-items: center
+    justify-content: space-between
 
 
 .btn-service:hover

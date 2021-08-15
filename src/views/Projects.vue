@@ -33,7 +33,6 @@
                   style="background-color: #000000a1; height:100%; opacity: 100%"
                   class="justify-center align-center"
                 >
-                  <span>a </span>
                   <v-row align="center" justify="center">
                     <span>{{ item.name }} </span>
                   </v-row>

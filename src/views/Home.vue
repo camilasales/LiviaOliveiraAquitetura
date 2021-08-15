@@ -350,6 +350,11 @@ export default {
   .grid-information
     grid-template-columns: 10fr 25fr
 
+@media  screen and (max-width: 564px)
+  .grid-information
+    grid-template-columns: 10fr 25fr
+  .list .item-list
+    flex: none
 
 @media  screen and (max-width: 360px)
   .grid-information
