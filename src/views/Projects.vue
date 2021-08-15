@@ -20,12 +20,12 @@
                   :class="{ 'show-btns': hover }"
                   :style="hover ? 'opacity: 100%' : 'opacity: 0.0'"
                 >
-                  <v-row class="d-flex flex-column mx-3">
-                    <span class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }}
-                      <p class="body-1">Ver mais</p>
-                    </span>
+                  <v-row align="center" justify="center">
+                    <span>{{ item.name }} </span>
                   </v-row>
+                  <div class="mx-3" align="center" justify="center">
+                    <span class="body-1">Ver mais</span>
+                  </div>
                 </div>
                 <div
                   @click="setDialog(item.id, item.name)"
@@ -33,12 +33,13 @@
                   style="background-color: #000000a1; height:100%; opacity: 100%"
                   class="justify-center align-center"
                 >
-                  <v-row class="d-flex flex-column mx-3">
-                    <span class="d-flex flex-column justify-center align-center"
-                      >{{ item.name }}
-                      <p class="body-1">Ver mais</p>
-                    </span>
+                  <span>a </span>
+                  <v-row align="center" justify="center">
+                    <span>{{ item.name }} </span>
                   </v-row>
+                  <div class="mx-3" align="center" justify="center">
+                    <span class="body-1">Ver mais</span>
+                  </div>
                 </div>
               </v-img>
             </div>
