@@ -22,9 +22,9 @@
         </div>
         <div
           @click="openDialog(item.name, item.description)"
-          class="btn-service"
           v-for="(item, index) in projetos"
           :key="index"
+          class="btn-service"
         >
           <span class="title-text">{{ item.name }}</span>
           <img :src="require('@/assets/img/icons/mais.png')" />
@@ -357,11 +357,6 @@ export default {
     text-align: start
     margin-bottom: 6vh
     width: 300px
-    display: flex
-    display: -webkit-flex
-    -webkit-flex-direction: row
-    align-items: center
-    justify-content: space-between
 
 
 .btn-service:hover
