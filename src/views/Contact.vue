@@ -150,6 +150,7 @@
 </template>
 <script>
 export default {
+  name: "Contato",
   data() {
     return {
       alert: false,

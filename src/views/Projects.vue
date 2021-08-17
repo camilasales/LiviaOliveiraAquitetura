@@ -58,6 +58,7 @@
 import { mapGetters } from "vuex";
 import detailProjects from "@/components/detailProjects.vue";
 export default {
+  name: "Projetos",
   components: {
     detailProjects,
   },

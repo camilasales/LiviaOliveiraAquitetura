@@ -47,6 +47,7 @@
 <script>
 import "@/assets/fonts/Brotherhood_Script.ttf";
 export default {
+  name: "Sobre",
   data() {
     return {
       viewPage: true,

@@ -249,6 +249,7 @@
 </template>
 <script>
 export default {
+  name: 'Servicos',
   data() {
     return {
       dialog: false,
