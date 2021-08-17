@@ -15,22 +15,22 @@ const routes = [
     component: Home,
   },
   {
-    path: "projetos",
+    path: "/projetos",
     name: "Projetos",
     component: Projects,
   },
   {
-    path: "sobre",
+    path: "/sobre",
     name: "Sobre",
     component: AboutLivia,
   },
   {
-    path: "contato",
+    path: "/contato",
     name: "Contato",
     component: Contact,
   },
   {
-    path: "servicos",
+    path: "/servicos",
     name: "Servicos",
     component: Services,
   },
@@ -44,9 +44,6 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
-  scrollBehavior() {
-    window.scrollTo(0, 0);
-  },
 });
 
 export default router;
